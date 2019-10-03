@@ -75,3 +75,4 @@ char compare(char *a,char *b)
     
     printf("ture");
     return 1;
+}
