@@ -13,34 +13,65 @@ int main()
 }
 char compare(char *a,char *b)
 {
-    int i;
-    if (*b == *a && *b == '.')    //比较当前位置s、p的字符是否匹配
+    if (*a == *b || *b == '.')    //比较当前位置s、p的字符是否匹配
     {
         b++;
         a++;
     }    
     else
     {
-        if (*(b++) == '*');
+        if (*(b+1) == '*')
+        b++;
         else
         {
             printf("false");
-            return 0;
+            return 1;
         }
     }
-    for(;a++;*a!='\0')
+    while(*a!='\0')
     {
         if (*a == *(a-1))
         {
             if (*b == '*');
             else
             {
-               
+                if (*a == *b || *b == '.')    //比较当前位置s、p的字符是否匹配
+                {
+                    b++;
+                    a++;
+                }    
+                else
+                {
+                    if (*(b+1) == '*')
+                    b++;
+                    else
+                    {
+                        printf("false");
+                        return 1;
+                    }
+                }
             }
         }
-        else 
-        
+        else
+        {
+            if (*a == *b || *b == '.')    //比较当前位置s、p的字符是否匹配
+            {
+                b++;
+                a++;
+            }    
+            else
+            {
+                if (*(b+1) == '*')
+                b++;
+                else
+                {
+                    printf("false");
+                    return 1;
+                }
+            }
+        }
+        a++;
     }
+    
     printf("ture");
-    return 0;
-}
+    return 1;
