@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdbool.h>
 char compare (char *a,char *b);
+bool isMatch(char *s,char *p);
 int main()
 {
     char s[20],p[20];
@@ -70,4 +72,7 @@ char compare(char *a,char *b)
     
     printf("ture");
     return 1;
+}
+bool isMatch(char *s,char *p){
+
 }
