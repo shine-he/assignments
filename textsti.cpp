@@ -57,12 +57,14 @@ char compare(char *a,char *b)
                 return 1;
             }
         }
+       /*
         if (*a == '\0' && *b!='\0') 
         {
             printf("false");
             return 1;
         }
         else;
+        */
     }
     else
     {
