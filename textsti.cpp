@@ -66,6 +66,10 @@ char compare(char *a,char *b)
                     else    b++;
                 }
             }
+            else if (*(b+1) == '*') {
+                b = b+2;
+            }
+            
             else {
                 return 0;
             }
@@ -112,7 +116,6 @@ char recompare(char *a,char *b)
 char recur(char *k){
     if(*k == '*')
     {
-        printf("2");
         k++;
         while(*k != '\0' && *(k+1) != '\0') {
             if (*k == *(k+1))  k++;
