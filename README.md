@@ -7,7 +7,6 @@
 按照要求输入字符串s与字符规律p
 ## 代码解释
 ---
-函数为compare (char *a,char *b){}正向匹配<br>
-    recompare (char *a,char *b){}反向匹配<br>
-    recur(char *k){}一个递归函数;
+函数为compare (char *a,char *b){}
+
    
